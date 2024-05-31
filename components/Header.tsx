@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 export default function Header({ sidebarSwitch }) {
   return (
-    <header className="px-4 py-2.5 flex justify-between items-center gap-32">
+    <header className="px-4 py-2.5 flex justify-between items-center gap-4 md:gap-32">
       <section className="flex items-center gap-5">
 
         <button onClick={sidebarSwitch}>
@@ -31,7 +31,7 @@ export default function Header({ sidebarSwitch }) {
         </Link>
       </section>
 
-      <section className="hidden md:flex flex-grow gap-3">
+      <section className="flex md:flex flex-grow gap-3">
         <div className="flex border border-zinc-800 pl-5 rounded-full overflow-hidden w-full">
           <input
             type="text"
@@ -55,7 +55,7 @@ export default function Header({ sidebarSwitch }) {
           <SignInButton mode="modal">
             <button className="flex items-center px-3 py-1.5 rounded-full gap-x-1 border border-zinc-800">
               <CircleUserRound className="stroke-blue-500" />
-              <span className="text-blue-500 text-sm font-medium">Sign in</span>
+              <span className="text-blue-500 text-sm font-medium hidden md:block">Sign in</span>
             </button>
           </SignInButton>
         </SignedOut>
